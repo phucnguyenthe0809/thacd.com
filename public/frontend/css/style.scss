@@ -1,0 +1,238 @@
+// color
+$red:#BA1717;
+$xamNhat:#333;
+$xamdam:#232728;
+$chonMenu:#D4491B;
+$chonMenuLeft:#403C3D;
+
+//size
+$size15:15px;
+$size12:12px;
+$size20:20px;
+@mixin none-border {
+    border: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+    background-color: #DAD6D6;
+}
+img
+{
+    max-width: 100%;
+}
+header
+{
+    background-color: $xamdam;
+    padding-top: 35px;
+    font-size: $size20;
+    color: white;
+    font-weight: bold;
+    div#content-head{
+        background-color: $xamNhat;
+        padding: 10px 0;
+    }
+}
+nav
+{
+    background-color: $red !important;
+    text-transform: uppercase;
+    padding: 0 !important;
+    border-bottom: 3px solid #f92025;
+
+    a{
+        color: #fff !important;
+    }
+    a.navbar-brand{
+        display: none;
+    }
+    li{
+        padding: 5px 20px;
+        &:hover{
+            background-color: $chonMenu
+        }
+        
+    }
+    li.active{
+        background-color: $chonMenu
+    }
+ 
+        
+    
+}
+
+main
+{
+    margin-top: 10px;
+    ul {
+        list-style-type: none;
+        margin-block-end: 0;
+        background-color: $xamNhat;
+        text-transform: uppercase;
+      }
+      
+      li a {
+        display: block;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: $size15;
+        border-bottom: 1px dotted rgb(149, 148, 148);
+      
+      }
+      
+      /* Change the link color on hover */
+      li a:hover {
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+      }
+
+      div.head-menu{
+          padding: 10px 5px;
+          font-weight: bold;
+          color: #fff;
+          background-color: $red;
+          
+      }
+      div#search{
+       box-sizing: border-box;
+        font-size: $size15;
+    
+        input{
+            @include none-border;
+            background-color: $xamNhat;
+            height: 35px;
+            padding: 5px 10px;
+            color: sandybrown;
+            width: calc(100% - 99px);
+            margin-right: -5px;
+          
+            &::placeholder{
+                color: sandybrown;
+            }
+
+        }
+        button{
+            @include none-border;
+            cursor: pointer;
+            background-color: $xamNhat;
+            font-size: $size15;
+            color: #fff;
+            padding: 5px;
+            height: 35px;
+            width: 100px;
+            border-left: 1px solid #fff;
+          
+        }
+      }
+}
+
+section.list-product
+{
+    
+    background-color: #fff;
+    margin: 10px 0px;
+    .row{
+        padding: 0px 10px;
+    }
+    p.link{
+        font-size: $size15;
+    }
+    h4{
+        color: $red;
+        background-color: darkgray;
+        padding: 10px 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+    div.col-lg-3{
+        margin-bottom: 10px;
+    }
+    div.product {
+        border: 1px solid #666;
+        height: 100%;
+       a{
+           img{
+               width: 100%;
+               height: 128px;
+           }
+           p{
+               padding: 10px;
+               color: #666;
+           }
+        &:hover{
+            color: $red;
+        }
+       }
+    }
+
+}
+footer{
+    background-color: $xamNhat;
+    
+    color: #fff;
+    div.container{
+        padding: 40px 0 20px 0;
+    }
+    h5{
+        font-size: $size15;
+    }
+    p{
+        margin: 5px 0;
+        font-size: $size12;
+    }
+    div.end-footer{
+        background-color: $red;
+        font-size: $size12;
+        padding: 10px 0;
+    }
+}
+section.category{
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  div.product{
+      text-align: center;
+    img{
+        width: 65%;
+        height: 300px;
+    }
+  }
+  span{
+    border: 1px solid #666;
+    padding: 10px 30px;
+    border-bottom: 1px solid #fff;
+  }
+  p.describe{
+      margin-top: 7px;
+    border-top: 1px solid #666;
+    padding: 5px;
+  }
+}
+
+@media (max-width:768px)
+{
+    nav a.navbar-brand{
+        display: block;
+    }
+    #carouselExampleControls{
+        display: none;
+    }
+    div.info div{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:320px)
+{
+    #content-head{
+        text-align: center;
+    }
+
+}
